@@ -21,12 +21,12 @@ int main()
 	CBubbleSortV4<int> elem;
 	elem.sort(arrInt,arrCount);
 	*/
-
+  /*
 	CInsertSort<int> elem;
 	elem.sort(arrInt,arrCount);
-
+  */
 	for(int index  = 0;index < arrCount;index++)
-	{
+	{ 
 		std::cout << arrInt[index] << " " ;	
 	}
 	std::cout<<std::endl;
