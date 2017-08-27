@@ -22,9 +22,16 @@ int main()
 	elem.sort(arrInt,arrCount);
 	*/
   
+	
+	/*
 	CInsertSort<int> elem;
 	elem.sort(arrInt,arrCount);
-  
+	*/
+	
+	
+	CShellSort<int> shellElem;
+	shellElem.sort(arrInt,arrCount);
+	
 	for(int index  = 0;index < arrCount;index++)
 	{ 
 		std::cout << arrInt[index] << " " ;	
