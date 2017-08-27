@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 2.8)
 
-project(MySort)
+project(MyTest)
 
 message(STATUS "cur path" ${CMAKE_CURRENT_SOURCE_DIR})
 
@@ -25,7 +25,7 @@ set(my_libs  )
 
 #add_library()
 
-set(project MySort)
+set(project MyAlgTest)
 
 add_executable(${project} ${my_project_files} )
 
