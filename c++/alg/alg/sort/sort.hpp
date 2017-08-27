@@ -5,6 +5,26 @@ template <typename T> class ISort
 public:
 	virtual int sort(T[],int) = 0;
 };
+template <typename T> class CSort : public ISort<T>
+{
+public:
+	virtual int sort(T arr[],int count)
+	{
+		return 0;
+	}
+	static bool is_sorted(T arr[],int count)
+	{
+		bool sorted = true;
+		for(int index = 0; index < count - 1;index++)
+		{
+			if(arr[index+1] < arr[index])
+			{
+				sorted = false;
+			}
+		}
+		return sorted;
+	}
+};
 template <typename T> class CSelectSort : public ISort<T>
 {
 public:
@@ -175,6 +195,11 @@ private:
 public:
 	virtual int sort(T arr[],int count)
 	{
+		bool sort_ok = CSort<T>::is_sorted(arr,count);
+		if(sort_ok)
+		{
+			return 0;
+		}
 		int* pArrIndex  = new int[count];
 		if(pArrIndex == 0)
 		{
